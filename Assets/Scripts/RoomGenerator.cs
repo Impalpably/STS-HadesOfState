@@ -71,6 +71,7 @@ public class RoomGenerator : MonoBehaviour
                     block = Instantiate(handler.leftRooms[spawnRandom], transform.position, Quaternion.identity);
                     break;
             }
+            handler.roomSize -= 1;
         }
 
         // If we're not creating a Room, we're creating a Hall instead
@@ -110,7 +111,7 @@ public class RoomGenerator : MonoBehaviour
             }
         }
 
-        handler.roomSize -= 1;
+        //handler.roomSize -= 1;
         Destroy(this.gameObject);
     }
 

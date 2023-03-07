@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 460511233352602461, guid: 921785f3ca46f4648bfbd1da568975d7, type: 3}
+  stairs: {fileID: 460511233352602461, guid: e4bf4edceeab1e5438146b2358ea7ffa, type: 3}
   mainCamera: {fileID: 519420028}
   startRoom: {fileID: 1372194174122930767, guid: 90ab07c52e22c534f9b3cc0034a8cedd, type: 3}
   minStartPos: -15
@@ -163,32 +164,55 @@ MonoBehaviour:
   - {fileID: 8378647781024877485, guid: ac255bfa317c8f542b3b6921c399a33f, type: 3}
   - {fileID: 8378647781024877485, guid: f6e6aeb3c3ace2f4e945acd6013b1eb3, type: 3}
   - {fileID: 8378647781024877485, guid: 61e8e1a508149184195f4af2c1d258f2, type: 3}
+  - {fileID: 8378647781024877485, guid: 622a5588332ddb3448210ff906a2dcb9, type: 3}
+  - {fileID: 8378647781024877485, guid: cdc8c0b5935d83146a1aba0022beae0b, type: 3}
   rightRooms:
   - {fileID: 8378647781024877485, guid: ab31559ecb47e65418288ef540b1e9b9, type: 3}
+  - {fileID: 8378647781024877485, guid: e5e6b04089f052e42acbabed2e689b7c, type: 3}
+  - {fileID: 8378647781024877485, guid: 64737076a6879f847a36f2f1890bab2f, type: 3}
+  - {fileID: 8378647781024877485, guid: 5cf3616d3b418634b89583c1409be6d6, type: 3}
   topRooms:
   - {fileID: 8378647781024877485, guid: a4e878865ff1cae49b7d318418d31377, type: 3}
+  - {fileID: 8378647781024877485, guid: f9c4cbe34bf4cf846998cc4d26fbdebc, type: 3}
+  - {fileID: 8378647781024877485, guid: 618f641089598d14d8465618d9f01204, type: 3}
+  - {fileID: 8378647781024877485, guid: 429678731ffc13d47b987f43e4bdd9eb, type: 3}
   bottomRooms:
+  - {fileID: 8378647781024877485, guid: 10a004a038b897c4db2026d37623063f, type: 3}
+  - {fileID: 8378647781024877485, guid: 8ccd6e7daf6d56c4d86821e19a263239, type: 3}
   - {fileID: 8378647781024877485, guid: 43a3c3e17c2c89d46889366c9d4e0611, type: 3}
+  - {fileID: 8378647781024877485, guid: 30e6f1bd6885b4e45bf2fb5994c206d9, type: 3}
   leftHall:
   - {fileID: 1372194174122930767, guid: d8bf1ebe38616a142a337300dd75be97, type: 3}
+  - {fileID: 1372194174122930767, guid: 3d364613062d9b744aca93d5073fc5b7, type: 3}
+  - {fileID: 1372194174122930767, guid: 5240449b57fcff943b2890270c2bc06e, type: 3}
   - {fileID: 1372194174122930767, guid: ad2abaa839efac94b9a5a10c0e3db5f5, type: 3}
+  - {fileID: 1372194174122930767, guid: de1128b7bea191443bf62df492c92106, type: 3}
   rightHall:
   - {fileID: 1372194174122930767, guid: 5f11e46165e66de4f9d71a8b6a6651fc, type: 3}
   - {fileID: 1372194174122930767, guid: 7b18a960dc6df0c45a2cbdfa156db558, type: 3}
   - {fileID: 1372194174122930767, guid: 425c384980d6506459a45bd3110ad42c, type: 3}
+  - {fileID: 1372194174122930767, guid: 99705d86242d9d545b440471c0d146b0, type: 3}
+  - {fileID: 1372194174122930767, guid: 4ba6319ce5e2ea549a4b139b90abd4ac, type: 3}
   topHall:
   - {fileID: 1372194174122930767, guid: 9d0369875c5542b4aba5375926c4cdd7, type: 3}
   - {fileID: 1372194174122930767, guid: c206151f3d6476c4ebbeda837ba38348, type: 3}
   - {fileID: 1372194174122930767, guid: 821d1f421c4a63d43afc2facb3fbaac2, type: 3}
+  - {fileID: 1372194174122930767, guid: 5bddd4c075e824a4099879b1d593624a, type: 3}
+  - {fileID: 1372194174122930767, guid: 996edac2f18c47d41a0e8e8b390cb369, type: 3}
   bottomHall:
-  - {fileID: 1372194174122930767, guid: 796ee5254ae1b764581e73de3d01f298, type: 3}
+  - {fileID: 1372194174122930767, guid: f9ad8affa4787ef449b0c257b8a1a400, type: 3}
   - {fileID: 1372194174122930767, guid: 471cce8aaf2c9aa408df68e35eb8f664, type: 3}
+  - {fileID: 1372194174122930767, guid: 796ee5254ae1b764581e73de3d01f298, type: 3}
+  - {fileID: 1372194174122930767, guid: 75f65ecf48f4a73499886fdbd297f1b0, type: 3}
+  - {fileID: 1372194174122930767, guid: c1c73d7128af07743b6f569ccf7d235e, type: 3}
   floorTiles:
   - {fileID: 7132163124988927990, guid: 2836ce1d8e07e45438db40a7e9be8066, type: 3}
   wallTiles:
   - {fileID: 7132163124988927990, guid: d2d3bdfdd48715a4fab52620f419f80c, type: 3}
   wallTilesLarge: []
-  roomSize: 3
+  roomSize: 5
+  roomSizeMin: 3
+  roomSizeMax: 15
   enemies:
   - {fileID: 460511233352602461, guid: cda696b18404b0349a1e0bdd8404bd1f, type: 3}
   bossEnemies: []

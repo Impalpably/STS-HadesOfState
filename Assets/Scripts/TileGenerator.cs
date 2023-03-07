@@ -6,6 +6,7 @@ public class TileGenerator : MonoBehaviour
 {
     // Floor = 0, Wall = 1
     public int type;
+    public bool isRoomTile;
 
     private Collider2D collidedObject;
     // Start is called before the first frame update
@@ -51,6 +52,15 @@ public class TileGenerator : MonoBehaviour
                 spawnRandom = Random.Range(0, handler.floorTiles.Length);
                 block = Instantiate(handler.floorTiles[spawnRandom], transform.position, Quaternion.identity);
                 break;
+        }
+
+        if(isRoomTile) 
+        {
+            block.name = "Room Tile";
+        }
+        else
+        {
+            block.name = "Hall Tile";
         }
 
         Destroy(this.gameObject);
