@@ -77,12 +77,12 @@ public class InkStoryScript : MonoBehaviour
         LustText.text = "Lust: " + lust;
         CorruptionText.text = "Corruption: " + corruption;
         GluttonyText.text = "Gluttony: " + gluttony;
-        GreedText.text = "Greed " + greed;
+        GreedText.text = "Greed: " + greed;
         WrathText.text = "Wrath: " + wrath;
         HeresayText.text = "Heresy: " + heresy;
-        ViolenceText.text = "Violence" + violence;
-        FraudText.text = "Fraud" + fraud;
-        TreacheryText.text = "Treachery" + treachery;
+        ViolenceText.text = "Violence: " + violence;
+        FraudText.text = "Fraud: " + fraud;
+        TreacheryText.text = "Treachery: " + treachery;
     }
 
     // Update Content
