@@ -152,14 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e8fca90f13a7e46ab009e215e3233d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftHall:
-  - {fileID: 1372194174122930767, guid: d8bf1ebe38616a142a337300dd75be97, type: 3}
-  rightHall:
-  - {fileID: 1372194174122930767, guid: 425c384980d6506459a45bd3110ad42c, type: 3}
-  topHall:
-  - {fileID: 1372194174122930767, guid: 821d1f421c4a63d43afc2facb3fbaac2, type: 3}
-  bottomHall:
-  - {fileID: 1372194174122930767, guid: 471cce8aaf2c9aa408df68e35eb8f664, type: 3}
+  player: {fileID: 460511233352602461, guid: 921785f3ca46f4648bfbd1da568975d7, type: 3}
+  mainCamera: {fileID: 519420028}
+  startRoom: {fileID: 1372194174122930767, guid: 90ab07c52e22c534f9b3cc0034a8cedd, type: 3}
+  minStartPos: -15
+  maxStartPos: 15
+  anyRooms:
+  - {fileID: 1372194174122930767, guid: 90ab07c52e22c534f9b3cc0034a8cedd, type: 3}
   leftRooms:
   - {fileID: 8378647781024877485, guid: ac255bfa317c8f542b3b6921c399a33f, type: 3}
   - {fileID: 8378647781024877485, guid: f6e6aeb3c3ace2f4e945acd6013b1eb3, type: 3}
@@ -170,20 +169,34 @@ MonoBehaviour:
   - {fileID: 8378647781024877485, guid: a4e878865ff1cae49b7d318418d31377, type: 3}
   bottomRooms:
   - {fileID: 8378647781024877485, guid: 43a3c3e17c2c89d46889366c9d4e0611, type: 3}
+  leftHall:
+  - {fileID: 1372194174122930767, guid: d8bf1ebe38616a142a337300dd75be97, type: 3}
+  - {fileID: 1372194174122930767, guid: ad2abaa839efac94b9a5a10c0e3db5f5, type: 3}
+  rightHall:
+  - {fileID: 1372194174122930767, guid: 5f11e46165e66de4f9d71a8b6a6651fc, type: 3}
+  - {fileID: 1372194174122930767, guid: 7b18a960dc6df0c45a2cbdfa156db558, type: 3}
+  - {fileID: 1372194174122930767, guid: 425c384980d6506459a45bd3110ad42c, type: 3}
+  topHall:
+  - {fileID: 1372194174122930767, guid: 9d0369875c5542b4aba5375926c4cdd7, type: 3}
+  - {fileID: 1372194174122930767, guid: c206151f3d6476c4ebbeda837ba38348, type: 3}
+  - {fileID: 1372194174122930767, guid: 821d1f421c4a63d43afc2facb3fbaac2, type: 3}
+  bottomHall:
+  - {fileID: 1372194174122930767, guid: 796ee5254ae1b764581e73de3d01f298, type: 3}
+  - {fileID: 1372194174122930767, guid: 471cce8aaf2c9aa408df68e35eb8f664, type: 3}
   floorTiles:
   - {fileID: 7132163124988927990, guid: 2836ce1d8e07e45438db40a7e9be8066, type: 3}
   wallTiles:
   - {fileID: 7132163124988927990, guid: d2d3bdfdd48715a4fab52620f419f80c, type: 3}
   wallTilesLarge: []
-  roomSize: 12
+  roomSize: 3
   enemies:
   - {fileID: 460511233352602461, guid: cda696b18404b0349a1e0bdd8404bd1f, type: 3}
   bossEnemies: []
   items:
   - {fileID: 7520486699175215076, guid: 5ea8c5892d40cdf4bb4147accb599f46, type: 3}
-  maxEnemies: 2
-  minEnemies: 1
-  maxItems: 1
+  maxEnemies: 12
+  minEnemies: 3
+  maxItems: 4
   minItems: 1
   ActorLayer:
     serializedVersion: 2
@@ -349,6 +362,10 @@ PrefabInstance:
     - target: {fileID: 1372194174122930767, guid: 90ab07c52e22c534f9b3cc0034a8cedd, type: 3}
       propertyPath: m_Name
       value: Default Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372194174122930767, guid: 90ab07c52e22c534f9b3cc0034a8cedd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1372194174282767804, guid: 90ab07c52e22c534f9b3cc0034a8cedd, type: 3}
       propertyPath: createHall
