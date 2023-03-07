@@ -5,14 +5,13 @@ VAR End = false
 Hello
 
 *Hi
-->Trump
+->Truss
 
-== Trump == 
+== Truss == 
 
-Script:
+Script
 
 *Response
-~Corruption += 1
 ->Finish
 
 == Finish == 
