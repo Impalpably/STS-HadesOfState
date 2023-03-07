@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &779832635148102676
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &800931932600587131
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &1372194173247592374
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &1372194174122930767
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &2509910764607366503
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &2952327773949987115
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &4012267206999578768
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &4150570229007391382
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &4787550469465944072
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &5907238637140021012
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0
 --- !u!1 &8020859533307943890
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,3 +656,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  isRoomTile: 0

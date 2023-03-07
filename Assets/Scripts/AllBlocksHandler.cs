@@ -6,6 +6,7 @@ public class AllBlocksHandler : MonoBehaviour
 {
     public GameObject player;
     private GameObject myPlayer;
+    private Vector2 startPos;
 
     public GameObject stairs;
     private GameObject myStairs;
@@ -29,7 +30,7 @@ public class AllBlocksHandler : MonoBehaviour
 
     public GameObject[] floorTiles;
     public GameObject[] wallTiles;
-    public GameObject[] wallTilesLarge;
+    public GameObject wallGenerator;
 
     public int roomSize;
     public int roomSizeMin = 3;
@@ -57,11 +58,12 @@ public class AllBlocksHandler : MonoBehaviour
         itemsToSpawn = Random.Range(minEnemies, maxItems);
         roomSize = Random.Range(roomSizeMin, roomSizeMax);
 
-        Vector2 startPos = new Vector2(Random.Range(minStartPos, maxStartPos), Random.Range(minStartPos, maxStartPos));
+        startPos = new Vector2(Random.Range(minStartPos, maxStartPos), Random.Range(minStartPos, maxStartPos));
 
         SpawnStartRoom(startPos);
 
         Invoke("SpawnEnemies", 2f);
+        Invoke("SpawnWalls", 2.5f);
     }
 
     void SpawnStartRoom(Vector2 startPos)
@@ -122,68 +124,122 @@ public class AllBlocksHandler : MonoBehaviour
         // Get all the possible tiles available
         GameObject[] tiles = GameObject.FindGameObjectsWithTag("FloorTile");
 
-        int tilechecker = 0;
-        while(tilechecker < tiles.Length)
+        while(true)
         {
             GameObject stairsTile = tiles[Random.Range(0, tiles.Length)];
             if (stairsTile.name == "Room Tile")
             {
                 Collider2D checkblock = Physics2D.OverlapCircle(stairsTile.transform.position, 0.1f, ActorLayer);
+                float distanceToStairs = Vector2.Distance(stairsTile.transform.position, myPlayer.transform.position);
 
-                if (checkblock)
+                // If the stairs would spawn underneath the player or too close to the player, relocate it
+                if (checkblock || distanceToStairs < 3f)
                 {
-                    Debug.Log("Current location blocked, recalculating...");
+                    Debug.Log("Current location too close to the player, recalculating...");
                 }
                 else
                 {
                     myStairs = Instantiate(stairs, new Vector3(stairsTile.transform.position.x, stairsTile.transform.position.y, -0.007f), Quaternion.identity);
                     myStairs.name = "Stairs";
                     Debug.Log("Stairs created!");
+                    Debug.Log(distanceToStairs);
                     break;
                 } 
             }
-            tilechecker++;
         }
 
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             GameObject myTile = tiles[Random.Range(0, tiles.Length)];
 
-            // Checks if the tile is free to spawn an enemy
-            Collider2D checkblock = Physics2D.OverlapCircle(myTile.transform.position, 0.1f, ActorLayer);
-            if (checkblock)
+            // Ensures to only spawn in Rooms and not Halls
+            while(true)
             {
-                // If the tile holds the player or an enemy already, it can't be placed on top
-                Debug.Log("Duplicate placement for enemy!");
-            }
-            else
-            {
-                // Places a random enemy if it is free
-                int randomEnemy = Random.Range(0, enemies.Length);
+                if (myTile.name == "Room Tile")
+                {
+                    // Checks if the tile is free to spawn an enemy
+                    Collider2D checkblock = Physics2D.OverlapCircle(myTile.transform.position, 0.1f, ActorLayer);
+                    
+                    // Ensures not to spawn too close to the player
+                    float distanceToPlayer = Vector2.Distance(myTile.transform.position, myPlayer.transform.position);
+                    if (checkblock || distanceToPlayer < 3f)
+                    {
+                        // If the tile holds the player or an enemy already, it can't be placed on top
+                        //Debug.Log("Duplicate placement for enemy!");
+                        break;
+                    }
+                    else
+                    {
+                        // Places a random enemy if it is free
+                        int randomEnemy = Random.Range(0, enemies.Length);
 
-                GameObject myEnemy = Instantiate(enemies[randomEnemy], new Vector3(myTile.transform.position.x, myTile.transform.position.y, -0.009f), Quaternion.identity);
-                //Debug.Log("Placed enemy.");
+                        GameObject myEnemy = Instantiate(enemies[randomEnemy], new Vector3(myTile.transform.position.x, myTile.transform.position.y, -0.009f), Quaternion.identity);
+                        //Debug.Log("Placed enemy.");
+                        break;
+                    }
+                }
+                else
+                {
+                    myTile = tiles[Random.Range(0, tiles.Length)];
+                }
             }
+
+            
         }
 
         for (int i = 0; i < itemsToSpawn; i++)
         {
             GameObject myTile = tiles[Random.Range(0, tiles.Length)];
 
-            // Checks if the tile is free to spawn an item
-            Collider2D checkblock = Physics2D.OverlapCircle(myTile.transform.position, 0.1f, ActorLayer);
-            if (checkblock)
+            // Ensures to only spawn in Rooms and not Halls
+            while (true)
             {
-                // If the tile holds the player, enemy or item already, it can't be placed on top
-                Debug.Log("Duplicate placement for item!");
-            }
-            else
-            {
-                // Places a random item if it is free
-                int randomItem = Random.Range(0, enemies.Length);
+                if (myTile.name == "Room Tile")
+                {
+                    // Checks if the tile is free to spawn an item
+                    Collider2D checkblock = Physics2D.OverlapCircle(myTile.transform.position, 0.1f, ActorLayer);
+                    if (checkblock)
+                    {
+                        // If the tile holds the player, enemy or item already, it can't be placed on top
+                        //Debug.Log("Duplicate placement for item!");
+                    }
+                    else
+                    {
+                        // Places a random item if it is free
+                        int randomItem = Random.Range(0, enemies.Length);
 
-                GameObject myItem = Instantiate(items[randomItem], new Vector3(myTile.transform.position.x, myTile.transform.position.y, -0.008f), Quaternion.identity);
-                //Debug.Log("Placed item.");
+                        GameObject myItem = Instantiate(items[randomItem], new Vector3(myTile.transform.position.x, myTile.transform.position.y, -0.008f), Quaternion.identity);
+                        //Debug.Log("Placed item.");
+                        break;
+                    }
+                }
+                else
+                {
+                    myTile = tiles[Random.Range(0, tiles.Length)];
+                }
+            }
+        }
+    }
+
+    void SpawnWalls()
+    {
+        // Number of TileGenerators in Wall Generator
+        int wallGeneratorLength = 15;
+
+        // How manay Wall Generators we want to spawn in each direction
+        // Must be odd
+        int wallGeneratorCount = 7;
+        int halfCount = Mathf.FloorToInt(wallGeneratorCount / 2);
+
+        for (int i = 0; i < wallGeneratorCount; i++)
+        {
+            int xDistance = (i - halfCount) * wallGeneratorLength;
+
+            for (int j = 0; j < wallGeneratorCount; j++) 
+            {
+                int yDistance = (j - halfCount) * wallGeneratorLength;
+                Vector2 spawnPos = new Vector2(startPos.x + xDistance, startPos.y + yDistance);
+                Instantiate(wallGenerator, spawnPos, Quaternion.identity);
             }
         }
     }

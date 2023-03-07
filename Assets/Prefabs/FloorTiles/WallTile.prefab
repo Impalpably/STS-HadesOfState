@@ -15,7 +15,7 @@ GameObject:
   m_Layer: 0
   m_Name: WallTile
   m_TagString: FloorTile
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -101,8 +101,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 9715220a147c0ad4f8965f86885e0b75, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,13 +125,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorTiles:
-  - {fileID: 7482667652216324306, guid: ba801705049c0b64c914b5b141d3094a, type: 3}
+  - {fileID: 21300000, guid: 9715220a147c0ad4f8965f86885e0b75, type: 3}
   floorThreeSides:
-  - {fileID: 7482667652216324306, guid: f6a06278486716b4d83cf89591465e34, type: 3}
+  - {fileID: 21300000, guid: 54de2c6b843fba14695ffcab3b7b8e24, type: 3}
   floorTwoSides:
-  - {fileID: -9095717837082945937, guid: 508d19ed2df81874c9537321c035fdbd, type: 3}
+  - {fileID: 21300000, guid: 6c2f18ee610e7d54690319df67ddce41, type: 3}
   floorTwoSidesCorner:
-  - {fileID: 3625043607559282579, guid: e228729d0aba66348beb180eef82204d, type: 3}
+  - {fileID: 21300000, guid: 28abba953701be84fa92cb1c65e55cc8, type: 3}
   floor: {fileID: 7132163124988927944}
   checkLayers:
     serializedVersion: 2

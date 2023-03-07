@@ -209,7 +209,7 @@ MonoBehaviour:
   - {fileID: 7132163124988927990, guid: 2836ce1d8e07e45438db40a7e9be8066, type: 3}
   wallTiles:
   - {fileID: 7132163124988927990, guid: d2d3bdfdd48715a4fab52620f419f80c, type: 3}
-  wallTilesLarge: []
+  wallGenerator: {fileID: 1372194174122930767, guid: f22e864c376a6d9469a81b9baca0478c, type: 3}
   roomSize: 5
   roomSizeMin: 3
   roomSizeMax: 15
