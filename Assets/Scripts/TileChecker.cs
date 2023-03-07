@@ -49,11 +49,12 @@ public class TileChecker : MonoBehaviour
             floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
 
+        //
         // Left & Down Corner
         else if (!isUp && isDown && isLeft && !isRight)
         {
             floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
-            floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
+            floor.transform.localRotation = Quaternion.Euler(0, 0, -90);
         }
         // Left & Up Corner
         else if (isUp && !isDown && isLeft && !isRight)
@@ -70,28 +71,29 @@ public class TileChecker : MonoBehaviour
         else if (isUp && !isDown && !isLeft && isRight)
         {
             floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
-            floor.transform.localRotation = Quaternion.Euler(0, 0, -90);
+            floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
 
-        // Up Wall
+        //
+        // Up Deadend
         else if (isUp && !isDown && !isLeft && !isRight)
-        {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
-            floor.transform.localRotation = Quaternion.Euler(0, 0, -90);
-        }
-        // Down Wall
-        else if (!isUp && isDown && !isLeft && !isRight)
         {
             floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
-        // Left Wall
+        // Down Deadend
+        else if (!isUp && isDown && !isLeft && !isRight)
+        {
+            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+            floor.transform.localRotation = Quaternion.Euler(0, 0, -90);
+        }
+        // Left Deadend
         else if (!isUp && !isDown && isLeft && !isRight)
         {
             floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 180);
         }
-        // Right Wall
+        // Right Deadend
         else if (!isUp && !isDown && !isLeft && isRight)
         {
             floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
