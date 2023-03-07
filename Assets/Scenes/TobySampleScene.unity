@@ -212,7 +212,7 @@ MonoBehaviour:
   wallGenerator: {fileID: 1372194174122930767, guid: f22e864c376a6d9469a81b9baca0478c, type: 3}
   roomSize: 5
   roomSizeMin: 5
-  roomSizeMax: 25
+  roomSizeMax: 12
   enemies:
   - {fileID: 460511233352602461, guid: cda696b18404b0349a1e0bdd8404bd1f, type: 3}
   bossEnemies: []
