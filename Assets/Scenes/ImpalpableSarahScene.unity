@@ -300,7 +300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &215534629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 396, y: 270}
+  m_AnchoredPosition: {x: 556, y: 510}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &215534630
@@ -1000,7 +1000,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.2283, y: -327}
+  m_AnchoredPosition: {x: -9.2282715, y: -327}
   m_SizeDelta: {x: -441.54, y: -769.8907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &751096423
@@ -1367,7 +1367,7 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 0be24dbafe3694def9add71dd393f8dd, type: 3}
+  - {fileID: 4900000, guid: 70ebbdf7c4fdc4221880250fa322195b, type: 3}
 --- !u!1 &1574189109
 GameObject:
   m_ObjectHideFlags: 0
