@@ -5,6 +5,7 @@ using UnityEngine;
 public class AllBlocksHandler : MonoBehaviour
 {
     public static AllBlocksHandler instance;
+    public CharacterHandler characterHandler;
 
     public GameObject player;
     private GameObject myPlayer;
@@ -70,6 +71,8 @@ public class AllBlocksHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        characterHandler = CharacterHandler.instance;
+
         if (minEnemies == maxEnemies)
         {
             enemiesToSpawn = minEnemies;
@@ -184,6 +187,7 @@ public class AllBlocksHandler : MonoBehaviour
                 {
                     myStairs = Instantiate(stairs, new Vector3(stairsTile.transform.position.x, stairsTile.transform.position.y, -0.007f), Quaternion.identity);
                     myStairs.name = "Stairs";
+                    characterHandler.stairs = myStairs;
                     //Debug.Log("Stairs created!");
                     //Debug.Log(distanceToStairs);
                     break;
@@ -209,9 +213,9 @@ public class AllBlocksHandler : MonoBehaviour
                         float distanceToPlayer = Vector2.Distance(myTile.transform.position, myPlayer.transform.position);
                         if (checkblock || distanceToPlayer < 3f)
                         {
-                            // If the tile holds the player or an enemy already, it can't be placed on top
+                            // If the tile holds the player or an enemy already, it can't be placed on top, so it needs to find a new place
                             //Debug.Log("Duplicate placement for enemy!");
-                            break;
+                            myTile = tiles[Random.Range(0, tiles.Length)];
                         }
                         else
                         {
@@ -250,6 +254,7 @@ public class AllBlocksHandler : MonoBehaviour
                         {
                             // If the tile holds the player, enemy or item already, it can't be placed on top
                             //Debug.Log("Duplicate placement for item!");
+                            myTile = tiles[Random.Range(0, tiles.Length)];
                         }
                         else
                         {
@@ -301,6 +306,9 @@ public class AllBlocksHandler : MonoBehaviour
         {
             myTile.GetComponent<BoxCollider2D>().enabled = false;
         }
+
+        // Allows the stairs to be stepped on
+        characterHandler.stairs.GetComponent<BoxCollider2D>().isTrigger = true;
 
         blackScreen.fading = true;
     }

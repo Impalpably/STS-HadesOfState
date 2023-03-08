@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
     private Vector2 movementInput;
 
+    public bool canUseStairs = false;
+
     [SerializeField]
     private float speed = 1f;
 
@@ -19,6 +21,21 @@ public class Player : MonoBehaviour
     {
         characterHandler = CharacterHandler.instance;
         myRigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Stairs")
+        {
+            if (canUseStairs)
+            {
+                Debug.Log("Use stairs?");
+            }
+            else
+            {
+                Debug.Log("You can't use the stairs yet! You need to unlock them first.");
+            }
+        }
     }
 
     // Update is called once per frame

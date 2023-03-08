@@ -6,6 +6,7 @@ public class CharacterHandler : MonoBehaviour
 {
     public static CharacterHandler instance;
     public bool enableMovement;
+    public GameObject stairs;
 
     private void Awake()
     {
