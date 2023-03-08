@@ -104,7 +104,7 @@ public class AllBlocksHandler : MonoBehaviour
 
         SpawnStartRoom(startPos);
 
-        Invoke("SpawnEnemies", 3f);
+        Invoke("SpawnEnemies", 3.5f);
         Invoke("SpawnWalls", 3.5f);
     }
 

@@ -38,6 +38,29 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "NPC")
+        {
+            // Stop movement for both entities
+            characterHandler.enableMovement = false;
+            myRigidbody.velocity = new Vector2(0, 0);
+            other.rigidbody.velocity = new Vector2(0, 0);
+            Debug.Log("Talk to NPC");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "NPC")
+        {
+            // Reenable movement for both entities
+            characterHandler.enableMovement = true;
+            myRigidbody.velocity = new Vector2(0, 0);
+            Debug.Log("Finished talking to NPC");
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
