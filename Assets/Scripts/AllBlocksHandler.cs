@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AllBlocksHandler : MonoBehaviour
 {
+    public static AllBlocksHandler instance;
+
     public GameObject player;
     private GameObject myPlayer;
     private Vector2 startPos;
@@ -50,6 +52,18 @@ public class AllBlocksHandler : MonoBehaviour
     private int itemsToSpawn;
 
     public LayerMask ActorLayer;
+
+    public FadeToBlack blackScreen;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            // More than one Handler in a scene
+            return;
+        }
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -114,10 +128,12 @@ public class AllBlocksHandler : MonoBehaviour
         myPlayer = Instantiate(player, playerPos, Quaternion.identity);
 
         mainCamera.transform.position = new Vector3(playerPos.x, playerPos.y, mainCamera.transform.position.z);
+        mainCamera.transform.parent = myPlayer.transform;
     }
 
     void SpawnEnemies()
     {
+        Debug.Log("Spawning entities...");
         // Reenables the palyer's collider so that other Actors can't be placed on top
         myPlayer.GetComponent<BoxCollider2D>().enabled = true;
 
@@ -135,14 +151,14 @@ public class AllBlocksHandler : MonoBehaviour
                 // If the stairs would spawn underneath the player or too close to the player, relocate it
                 if (checkblock || distanceToStairs < 3f)
                 {
-                    Debug.Log("Current location too close to the player, recalculating...");
+                    //Debug.Log("Current location too close to the player, recalculating...");
                 }
                 else
                 {
                     myStairs = Instantiate(stairs, new Vector3(stairsTile.transform.position.x, stairsTile.transform.position.y, -0.007f), Quaternion.identity);
                     myStairs.name = "Stairs";
-                    Debug.Log("Stairs created!");
-                    Debug.Log(distanceToStairs);
+                    //Debug.Log("Stairs created!");
+                    //Debug.Log(distanceToStairs);
                     break;
                 } 
             }
@@ -223,6 +239,7 @@ public class AllBlocksHandler : MonoBehaviour
 
     void SpawnWalls()
     {
+        Debug.Log("Spawning walls...");
         // Number of TileGenerators in Wall Generator
         int wallGeneratorLength = 15;
 
@@ -242,5 +259,11 @@ public class AllBlocksHandler : MonoBehaviour
                 Instantiate(wallGenerator, spawnPos, Quaternion.identity);
             }
         }
+        Invoke("BeginMovement", 1f);
+    }
+
+    void BeginMovement()
+    {
+        blackScreen.fading = true;
     }
 }

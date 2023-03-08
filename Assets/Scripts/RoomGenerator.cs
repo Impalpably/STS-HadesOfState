@@ -23,7 +23,7 @@ public class RoomGenerator : MonoBehaviour
         }
         
         // Spawn room block
-        AllBlocksHandler handler = GameObject.FindGameObjectWithTag("GameController").GetComponent<AllBlocksHandler>();
+        AllBlocksHandler handler = AllBlocksHandler.instance; //GameObject.FindGameObjectWithTag("GameController").GetComponent<AllBlocksHandler>();
 
         // If no more rooms, don't spawn
         if (handler.roomSize <= 0)
