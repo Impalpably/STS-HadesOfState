@@ -213,7 +213,7 @@ MonoBehaviour:
   wallGenerator: {fileID: 1372194174122930767, guid: f22e864c376a6d9469a81b9baca0478c, type: 3}
   roomSize: 5
   roomSizeMin: 5
-  roomSizeMax: 12
+  roomSizeMax: 10
   enemies:
   - {fileID: 460511233352602461, guid: cda696b18404b0349a1e0bdd8404bd1f, type: 3}
   bossEnemies: []
@@ -308,7 +308,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

@@ -55,6 +55,8 @@ public class AllBlocksHandler : MonoBehaviour
 
     public FadeToBlack blackScreen;
 
+    private GameObject[] tiles;
+
     private void Awake()
     {
         if (instance != null)
@@ -76,8 +78,8 @@ public class AllBlocksHandler : MonoBehaviour
 
         SpawnStartRoom(startPos);
 
-        Invoke("SpawnEnemies", 2f);
-        Invoke("SpawnWalls", 2.5f);
+        Invoke("SpawnEnemies", 3f);
+        Invoke("SpawnWalls", 3.5f);
     }
 
     void SpawnStartRoom(Vector2 startPos)
@@ -124,21 +126,23 @@ public class AllBlocksHandler : MonoBehaviour
         Debug.Log(startRoom.ToString());
 
         // The player must always spawn within the starting room
-        // The player's collider is disabled to start with to not interfere with tile generation
+        // The player is disabled to start with to not interfere with tile generation
         myPlayer = Instantiate(player, playerPos, Quaternion.identity);
+        myPlayer.SetActive(false);
 
         mainCamera.transform.position = new Vector3(playerPos.x, playerPos.y, mainCamera.transform.position.z);
-        mainCamera.transform.parent = myPlayer.transform;
     }
 
     void SpawnEnemies()
     {
         Debug.Log("Spawning entities...");
-        // Reenables the palyer's collider so that other Actors can't be placed on top
-        myPlayer.GetComponent<BoxCollider2D>().enabled = true;
+        // Reenables the palyer so that other Actors can't be placed on top
+        myPlayer.SetActive(true);
+        mainCamera.transform.parent = myPlayer.transform;
+        //myPlayer.GetComponent<BoxCollider2D>().enabled = true;
 
         // Get all the possible tiles available
-        GameObject[] tiles = GameObject.FindGameObjectsWithTag("FloorTile");
+        tiles = GameObject.FindGameObjectsWithTag("FloorTile");
 
         while(true)
         {
@@ -264,6 +268,11 @@ public class AllBlocksHandler : MonoBehaviour
 
     void BeginMovement()
     {
+        foreach(GameObject myTile in tiles)
+        {
+            myTile.GetComponent<BoxCollider2D>().enabled = false;
+        }
+
         blackScreen.fading = true;
     }
 }
