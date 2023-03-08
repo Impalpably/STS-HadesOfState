@@ -219,9 +219,9 @@ MonoBehaviour:
   bossEnemies: []
   items:
   - {fileID: 7520486699175215076, guid: 5ea8c5892d40cdf4bb4147accb599f46, type: 3}
-  maxEnemies: 12
-  minEnemies: 5
-  maxItems: 5
+  maxEnemies: 1
+  minEnemies: 1
+  maxItems: 0
   minItems: 0
   ActorLayer:
     serializedVersion: 2
@@ -308,7 +308,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
