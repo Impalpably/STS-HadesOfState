@@ -85,20 +85,6 @@ public class InkStoryScript : MonoBehaviour
         TreacheryText.text = "Treachery: " + treachery;
     }
 
-    private void Update()
-    {
-        if (End == true)
-        {
-
-            //InkStory.Continue();
-            DestroyChildren(OptionsPanel.transform);
-            SceneDescription.text = "";
-            UIPanel.SetActive(false);
-
-            End = false;
-
-        }
-    }
 
     // Update Content
     void UpdateContent(Story InkStory)

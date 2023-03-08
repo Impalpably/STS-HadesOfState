@@ -183,7 +183,7 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
+  - {fileID: 4900000, guid: 28b3b4c84c2ad44c28808950066f15a6, type: 3}
 --- !u!1 &91611832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
+  - {fileID: 4900000, guid: d0f04eba5389d406d871d56281f9ec09, type: 3}
 --- !u!1 &583390570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,7 +1876,7 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
+  - {fileID: 4900000, guid: 4c2af5cd5165e4925b31269684c752d0, type: 3}
 --- !u!1 &885850644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,7 +2017,7 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
+  - {fileID: 4900000, guid: d54f4d20265d843dd904854b4c35690e, type: 3}
 --- !u!1 &1019783693
 GameObject:
   m_ObjectHideFlags: 0
