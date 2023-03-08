@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: abb60db803eba40bb871961f92b4fb3b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Tellural
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e785c9db753fb4e438be6a803c4ecffa, type: 3}
+  - {fileID: 12800000, guid: f1e942bc592484cbc9d736aded4e62d6, type: 3}
+  - {fileID: 12800000, guid: f847b77d3ae2841e685a17f3e33b48a9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
