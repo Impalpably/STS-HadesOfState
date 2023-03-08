@@ -39,28 +39,43 @@ public class TileGenerator : MonoBehaviour
             case 0:
                 spawnRandom = Random.Range(0, handler.floorTiles.Length);
                 block = Instantiate(handler.floorTiles[spawnRandom], transform.position, Quaternion.identity);
+                block.transform.parent = GameObject.Find("Floor Tile List").transform;
+
+                if (isRoomTile)
+                {
+                    block.name = "Room Tile";
+                }
+                else
+                {
+                    block.name = "Hall Tile";
+                }
+
                 break;
 
             // Wall
             case 1:
                 spawnRandom = Random.Range(0, handler.wallTiles.Length);
                 block = Instantiate(handler.wallTiles[spawnRandom], transform.position, Quaternion.identity);
+                block.transform.parent = GameObject.Find("Wall Tile List").transform;
+                block.name = "Wall Tile";
                 break;
 
             // Defaults to Floor
             default:
                 spawnRandom = Random.Range(0, handler.floorTiles.Length);
                 block = Instantiate(handler.floorTiles[spawnRandom], transform.position, Quaternion.identity);
-                break;
-        }
+                block.transform.parent = GameObject.Find("Floor Tile List").transform;
 
-        if(isRoomTile) 
-        {
-            block.name = "Room Tile";
-        }
-        else
-        {
-            block.name = "Hall Tile";
+                if (isRoomTile)
+                {
+                    block.name = "Room Tile";
+                }
+                else
+                {
+                    block.name = "Hall Tile";
+                }
+
+                break;
         }
 
         Destroy(this.gameObject);
