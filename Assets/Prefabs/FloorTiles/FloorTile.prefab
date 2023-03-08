@@ -132,6 +132,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 85a6bd3f0310101459a1db1554e5c3d9, type: 3}
   floorTwoSidesCorner:
   - {fileID: 21300000, guid: 54a01a9e8786d9544802fcea19872112, type: 3}
+  floorOneSide:
+  - {fileID: 21300000, guid: b2d59e67d53258340ab903a015390972, type: 3}
+  floorAllSides: {fileID: 21300000, guid: b2d59e67d53258340ab903a015390972, type: 3}
   floor: {fileID: 7132163124988927944}
   checkLayers:
     serializedVersion: 2
