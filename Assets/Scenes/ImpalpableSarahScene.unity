@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &82568032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82568033}
+  - component: {fileID: 82568034}
+  m_Layer: 0
+  m_Name: GluttonyInkStory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82568033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82568032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770652525}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82568034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82568032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d62beb3f959a4792865b08cd08786a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionsPanel: {fileID: 751096421}
+  UIPanel: {fileID: 481037982}
+  SceneDescription: {fileID: 1940946733}
+  StatisticsText: {fileID: 215534631}
+  CorruptionText: {fileID: 800130413}
+  LustText: {fileID: 193473129}
+  GluttonyText: {fileID: 1075178721}
+  GreedText: {fileID: 885850647}
+  WrathText: {fileID: 1939281973}
+  HeresayText: {fileID: 503792465}
+  ViolenceText: {fileID: 399272970}
+  FraudText: {fileID: 91611835}
+  TreacheryText: {fileID: 691574951}
+  ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
+  End: 0
+  inkJSONAsset:
+  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
 --- !u!1 &91611832
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +264,174 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!1 &104107446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104107448}
+  - component: {fileID: 104107447}
+  m_Layer: 0
+  m_Name: StatesGhostie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &104107447
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104107446}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 100
+  m_Sprite: {fileID: 21300000, guid: e9b59108894754b36beffbefb22dc0e3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.12, y: 5.12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &104107448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104107446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.778357, y: 2.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &107227219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107227220}
+  - component: {fileID: 107227221}
+  m_Layer: 0
+  m_Name: AristotleCorruption
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &107227220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107227219}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.97, y: -0.95, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 583390572}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &107227221
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107227219}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 100
+  m_Sprite: {fileID: 21300000, guid: 0aee10171a39d4fa5bdf53c49334561a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &193473126
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +592,67 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!1 &277955560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 277955561}
+  - component: {fileID: 277955562}
+  m_Layer: 0
+  m_Name: TreacheryInkStory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &277955561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277955560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770652525}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &277955562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277955560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d62beb3f959a4792865b08cd08786a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionsPanel: {fileID: 751096421}
+  UIPanel: {fileID: 481037982}
+  SceneDescription: {fileID: 1940946733}
+  StatisticsText: {fileID: 215534631}
+  CorruptionText: {fileID: 800130413}
+  LustText: {fileID: 193473129}
+  GluttonyText: {fileID: 1075178721}
+  GreedText: {fileID: 885850647}
+  WrathText: {fileID: 1939281973}
+  HeresayText: {fileID: 503792465}
+  ViolenceText: {fileID: 399272970}
+  FraudText: {fileID: 91611835}
+  TreacheryText: {fileID: 691574951}
+  ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
+  End: 0
+  inkJSONAsset:
+  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
 --- !u!1 &366887799
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,6 +950,67 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!1 &453348211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 453348212}
+  - component: {fileID: 453348213}
+  m_Layer: 0
+  m_Name: HeresyInkStory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &453348212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453348211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770652525}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453348213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453348211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d62beb3f959a4792865b08cd08786a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionsPanel: {fileID: 751096421}
+  UIPanel: {fileID: 481037982}
+  SceneDescription: {fileID: 1940946733}
+  StatisticsText: {fileID: 215534631}
+  CorruptionText: {fileID: 800130413}
+  LustText: {fileID: 193473129}
+  GluttonyText: {fileID: 1075178721}
+  GreedText: {fileID: 885850647}
+  WrathText: {fileID: 1939281973}
+  HeresayText: {fileID: 503792465}
+  ViolenceText: {fileID: 399272970}
+  FraudText: {fileID: 91611835}
+  TreacheryText: {fileID: 691574951}
+  ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
+  End: 0
+  inkJSONAsset:
+  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
 --- !u!1 &481037982
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +1251,67 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!1 &511667524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511667525}
+  - component: {fileID: 511667526}
+  m_Layer: 0
+  m_Name: WrathInkStory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511667525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511667524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770652525}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &511667526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511667524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d62beb3f959a4792865b08cd08786a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionsPanel: {fileID: 751096421}
+  UIPanel: {fileID: 481037982}
+  SceneDescription: {fileID: 1940946733}
+  StatisticsText: {fileID: 215534631}
+  CorruptionText: {fileID: 800130413}
+  LustText: {fileID: 193473129}
+  GluttonyText: {fileID: 1075178721}
+  GreedText: {fileID: 885850647}
+  WrathText: {fileID: 1939281973}
+  HeresayText: {fileID: 503792465}
+  ViolenceText: {fileID: 399272970}
+  FraudText: {fileID: 91611835}
+  TreacheryText: {fileID: 691574951}
+  ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
+  End: 0
+  inkJSONAsset:
+  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
 --- !u!1 &583390570
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +1397,7 @@ Transform:
   - {fileID: 816465912}
   - {fileID: 1040029495}
   - {fileID: 482974608}
+  - {fileID: 107227220}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1403,6 +1816,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &864202397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 864202398}
+  - component: {fileID: 864202399}
+  m_Layer: 0
+  m_Name: GreedInkStory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &864202398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864202397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770652525}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &864202399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864202397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d62beb3f959a4792865b08cd08786a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionsPanel: {fileID: 751096421}
+  UIPanel: {fileID: 481037982}
+  SceneDescription: {fileID: 1940946733}
+  StatisticsText: {fileID: 215534631}
+  CorruptionText: {fileID: 800130413}
+  LustText: {fileID: 193473129}
+  GluttonyText: {fileID: 1075178721}
+  GreedText: {fileID: 885850647}
+  WrathText: {fileID: 1939281973}
+  HeresayText: {fileID: 503792465}
+  ViolenceText: {fileID: 399272970}
+  FraudText: {fileID: 91611835}
+  TreacheryText: {fileID: 691574951}
+  ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
+  End: 0
+  inkJSONAsset:
+  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
 --- !u!1 &885850644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1957,67 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
+--- !u!1 &973008024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973008025}
+  - component: {fileID: 973008026}
+  m_Layer: 0
+  m_Name: ViolenceInkStory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973008025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973008024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770652525}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &973008026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973008024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d62beb3f959a4792865b08cd08786a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionsPanel: {fileID: 751096421}
+  UIPanel: {fileID: 481037982}
+  SceneDescription: {fileID: 1940946733}
+  StatisticsText: {fileID: 215534631}
+  CorruptionText: {fileID: 800130413}
+  LustText: {fileID: 193473129}
+  GluttonyText: {fileID: 1075178721}
+  GreedText: {fileID: 885850647}
+  WrathText: {fileID: 1939281973}
+  HeresayText: {fileID: 503792465}
+  ViolenceText: {fileID: 399272970}
+  FraudText: {fileID: 91611835}
+  TreacheryText: {fileID: 691574951}
+  ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
+  End: 0
+  inkJSONAsset:
+  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
 --- !u!1 &1019783693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,7 +2296,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1770652525}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1573114499
 MonoBehaviour:
@@ -1791,7 +2326,7 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 70ebbdf7c4fdc4221880250fa322195b, type: 3}
+  - {fileID: 4900000, guid: 30c4e0c6a6dc346c692a7ff7e97966eb, type: 3}
 --- !u!1 &1574189109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,7 +2419,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574189109}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e6baf15dcb8c46b7b425fad8925186d, type: 3}
   m_Name: 
@@ -1918,8 +2453,15 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1573114498}
+  - {fileID: 2102795866}
   - {fileID: 1950878200}
+  - {fileID: 1573114498}
+  - {fileID: 864202398}
+  - {fileID: 82568033}
+  - {fileID: 511667525}
+  - {fileID: 973008025}
+  - {fileID: 453348212}
+  - {fileID: 277955561}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2143,4 +2685,65 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 70ebbdf7c4fdc4221880250fa322195b, type: 3}
+  - {fileID: 4900000, guid: f40e88afaf4b54df7b1fe197780b593c, type: 3}
+--- !u!1 &2102795865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102795866}
+  - component: {fileID: 2102795867}
+  m_Layer: 0
+  m_Name: LimboInkStory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2102795866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102795865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770652525}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2102795867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102795865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d62beb3f959a4792865b08cd08786a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OptionsPanel: {fileID: 751096421}
+  UIPanel: {fileID: 481037982}
+  SceneDescription: {fileID: 1940946733}
+  StatisticsText: {fileID: 215534631}
+  CorruptionText: {fileID: 800130413}
+  LustText: {fileID: 193473129}
+  GluttonyText: {fileID: 1075178721}
+  GreedText: {fileID: 885850647}
+  WrathText: {fileID: 1939281973}
+  HeresayText: {fileID: 503792465}
+  ViolenceText: {fileID: 399272970}
+  FraudText: {fileID: 91611835}
+  TreacheryText: {fileID: 691574951}
+  ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
+  End: 0
+  inkJSONAsset:
+  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}

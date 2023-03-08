@@ -2,7 +2,7 @@ INCLUDE Globals.ink
 
 VAR End = false
 
-Hello, are you here to see me? Perhaps I deserve to be here. Let me tell you about my time in politics.
+Hello, are you here to see me? Let me tell you about my time in politics.
 
 {~It was nowhere. Time to vote for ever. Accompanying the family, and down. | It took a few goes to tell my piece. It was nowhere. My political judgement was nowhere. | In the turmoil. In the end, the Health Secretary for ever. Well let's hope I think the ice cap.}
 
@@ -35,7 +35,13 @@ Hello, are you here to see me? Perhaps I deserve to be here. Let me tell you abo
 
 Should we condem this man for his lust, or should we let him leave? Perhaps you feel he belongs at a different level of hell? 
 
-*Response
+*Yea he has it coming.
+->Finish
+
+*I feel like he belongs in every level of hell.
+->Finish
+
+*How much trouble could he cause in heaven.
 ->Finish
 
 == Finish == 
