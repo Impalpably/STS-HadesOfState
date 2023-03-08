@@ -135,7 +135,7 @@ MonoBehaviour:
   floor: {fileID: 7132163124988927944}
   checkLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
   isLeft: 0
   isRight: 0
   isUp: 0
