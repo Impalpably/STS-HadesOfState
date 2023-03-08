@@ -27,7 +27,7 @@ public class TileGenerator : MonoBehaviour
         }
 
         // Spawn room block
-        AllBlocksHandler handler = GameObject.FindGameObjectWithTag("GameController").GetComponent<AllBlocksHandler>();
+        AllBlocksHandler handler = AllBlocksHandler.instance; //GameObject.FindGameObjectWithTag("GameController").GetComponent<AllBlocksHandler>();
 
         GameObject block = null;
 
