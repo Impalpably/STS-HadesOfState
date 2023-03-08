@@ -85,6 +85,21 @@ public class InkStoryScript : MonoBehaviour
         TreacheryText.text = "Treachery: " + treachery;
     }
 
+    private void Update()
+    {
+        if (End == true)
+        {
+
+            //InkStory.Continue();
+            DestroyChildren(OptionsPanel.transform);
+            SceneDescription.text = "";
+            UIPanel.SetActive(false);
+
+            End = false;
+
+        }
+    }
+
     // Update Content
     void UpdateContent(Story InkStory)
     {
@@ -100,7 +115,7 @@ public class InkStoryScript : MonoBehaviour
 
         DestroyChildren(OptionsPanel.transform);
 
-        InkStory.ObserveVariables(new List<string>() { "Lust", "Corruption", "Gluttony", "Greed", "Wrath", "Heresy", "Violence", "Fraud", "Treachery" },
+        InkStory.ObserveVariables(new List<string>() { "End", "Lust", "Corruption", "Gluttony", "Greed", "Wrath", "Heresy", "Violence", "Fraud", "Treachery" },
         (variable, value) =>
         {
             switch (variable)
@@ -141,6 +156,9 @@ public class InkStoryScript : MonoBehaviour
                     treachery = (int)value;
                     break;
 
+                case "End":
+                    End = (bool)value;
+                    break;
             }
 
             UpdateStatistics();
