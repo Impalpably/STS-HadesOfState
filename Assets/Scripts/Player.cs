@@ -62,12 +62,18 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "NPC")
         {
-            // Stop movement for both entities
-            characterHandler.enableMovement = false;
-            myRigidbody.velocity = new Vector2(0, 0);
-            other.rigidbody.velocity = new Vector2(0, 0);
-            Debug.Log("Talk to NPC");
-            canUseStairs = true;
+            NPCInkDialogue story = NPCInkDialogue.instance;
+
+            if (story.firstStoryTime == true)
+            {
+                // Stop movement for both entities
+                characterHandler.enableMovement = false;
+                myRigidbody.velocity = new Vector2(0, 0);
+                other.rigidbody.velocity = new Vector2(0, 0);
+                Debug.Log("Talk to NPC");
+                story.TellStory();
+                canUseStairs = true;
+            }
         }
     }
 

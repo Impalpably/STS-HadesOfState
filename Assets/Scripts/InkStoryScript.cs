@@ -168,6 +168,8 @@ public class InkStoryScript : MonoBehaviour
                     SceneDescription.text = "";
                     UIPanel.SetActive(false);
 
+                    CharacterHandler.instance.EnableMovement();
+
                     End = false;
                     PickRandomStory();
 

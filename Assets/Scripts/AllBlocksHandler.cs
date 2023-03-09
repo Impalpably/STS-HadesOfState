@@ -118,22 +118,22 @@ public class AllBlocksHandler : MonoBehaviour
         {
             case 0:
                 startRoom = leftRooms[Random.Range(0, leftRooms.Length)];
-                playerPos = new Vector3(startPos.x + Random.Range(-2, 0), startPos.y + Random.Range(-1, 1), -0.01f);
+                playerPos = new Vector3(startPos.x + Random.Range(-1, 0), startPos.y + Random.Range(-1, 1), -0.01f);
                 break;
 
             case 1:
                 startRoom = rightRooms[Random.Range(0, rightRooms.Length)];
-                playerPos = new Vector3(startPos.x + Random.Range(0, 2), startPos.y + Random.Range(-1, 1), -0.01f);
+                playerPos = new Vector3(startPos.x + Random.Range(0, 1), startPos.y + Random.Range(-1, 1), -0.01f);
                 break;
 
             case 2:
                 startRoom = topRooms[Random.Range(0, topRooms.Length)];
-                playerPos = new Vector3(startPos.x + Random.Range(-1, 1), startPos.y + Random.Range(0, 2), -0.01f);
+                playerPos = new Vector3(startPos.x + Random.Range(-1, 1), startPos.y + Random.Range(0, 1), -0.01f);
                 break;
 
             case 3:
                 startRoom = bottomRooms[Random.Range(0, bottomRooms.Length)];
-                playerPos = new Vector3(startPos.x + Random.Range(-1, 1), startPos.y + Random.Range(-2, 0), -0.01f);
+                playerPos = new Vector3(startPos.x + Random.Range(-1, 1), startPos.y + Random.Range(-1, 0), -0.01f);
                 break;
 
             case 4:

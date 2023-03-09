@@ -4,16 +4,34 @@ using UnityEngine;
 
 public class NPCInkDialogue : MonoBehaviour
 {
-
-    public GameObject InkCanvas;
+    public static NPCInkDialogue instance;
+    //public GameObject InkCanvas;
     public GameObject InkStoryLevel;
     public GameObject NPCImage;
+    public GameObject UIPanel;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public bool firstStoryTime = true;
+
+    private void Awake()
     {
-        InkCanvas.SetActive(true);
-        InkStoryLevel.SetActive(true);
-        NPCImage.SetActive(true);
+        if (instance != null)
+        {
+            // More than one Handler in a scene
+            return;
+        }
+        instance = this;
     }
 
+    public void TellStory()
+    {
+        if (firstStoryTime)
+        {
+            //InkCanvas.SetActive(true);
+            InkStoryLevel.SetActive(true);
+            NPCImage.SetActive(true);
+            UIPanel.SetActive(true);
+            firstStoryTime = false;
+        }
+        
+    }
 }
