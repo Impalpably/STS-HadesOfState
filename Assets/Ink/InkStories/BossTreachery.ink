@@ -77,6 +77,8 @@ The player is consumed by the demons of treachery, and is doomed to suffer in th
 == Ending4 ==
 You wander aimlessly through the final level of hell in Dante's Inferno, dedicated to treachery, where those who have committed the ultimate betrayal are punished. But their punishments aren't yours, you're a spectator. You watch as souls are subjected to varying degrees of torment, ranging from immersion in ice to ceaseless rain of fire and brimstone. At the center of the final level, Satan is trapped in a frozen lake, constantly flapping his wings and creating a freezing wind that keeps him and the other souls trapped in their icy tombs, representing the ultimate isolation and despair of those who have committed this sin.
 
+~ End = true
+
 Eventually, you realize that redemption is something that can only come from within, and that the true journey was the one you took to get here.
 *You're still stuck in hell though
 ->DONE
