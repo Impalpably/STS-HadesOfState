@@ -6,7 +6,14 @@ And now you find yourself in anger.
 
 {~There is the stench of purpose. | Power is success?}
 
-*It's becoming harder to stay morale
+*So why are you in the anger circle? 
+->ThatcherCircle
+
+== ThatcherCircle == 
+
+I always cheer up immensely if they attack one personally, it was because I love debate. 
+
+*It's becoming harder to stay morale.
 ~Wrath += 1
 ->Thatcher
 

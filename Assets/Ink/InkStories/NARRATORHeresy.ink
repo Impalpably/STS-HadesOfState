@@ -24,13 +24,14 @@ Welcome to heresy! I have been your guide, following you and watching you {~but 
 
 Have you been enjoying yourself? You are approaching the final level of hell and your only chance to leave. Just remember, some of the challenges you'll face may not be as they appear.
 
-*Can you give me an example?
-~Heresy += 1
+*Wait, my only chance to leave? What do you mean?
 ->Guide2
 
 == Guide2 ==
 
 Well, let's say you're playing a puzzle game, and I tell you that you need to match all the colors in a certain pattern. But in reality, you need to match the shapes instead.
+
+You'll be given a great challenge, if you don't pass, you'll never have your life back. 
 
 *So, you're saying that you'll intentionally mislead me?
 ->Guide3
@@ -50,7 +51,7 @@ Ah, but that's the fun part! You can't trust me, but you also can't win without 
 ->Guide5
 
 == Guide5 == 
-Of course, the game is fair! 
+Yes, of course it's fair, Mwhahahahahah. Ahem. Yes. 
 ~ End = true
 
 *I like a challenge! Let's do this!
