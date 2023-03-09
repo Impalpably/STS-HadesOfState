@@ -35,7 +35,7 @@ Welcome to the first level of hell Limbo. I am Marcus Aurelius and I am your ver
 
 == Finish == 
 
-I should tell you. Every conversation you have, every choice you make and every reply will cost you your place in hell, or if you're very good hell. So be careful what you say.
+I should tell you. Every conversation you have, every choice you make and every reply will cost you your place in hell, or if you're very good, still hell. So be careful what you say.
 
 And my final parting wisdome. You may make an excellent use of life.
 

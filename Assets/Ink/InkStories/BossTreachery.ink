@@ -2,7 +2,7 @@ INCLUDE Globals.ink
 
 VAR End = false
 
-{~Treachery, it is a fearsome place. But remember, you are not here to be punished. You are here to find redemption. | Welcome, mortal. You have come to the domain of treachery, where those who have betrayed their closest companions and benefactors are punished. }
+{~Treachery, it is a fearsome place. But remember, you are not here to be punished. You are here to find redemption. | Welcome, mortal. You have come to the circle of treachery, where those who have betrayed their closest companions and benefactors are punished. }
 
 *This is it, the final level of hell. The place where the ultimate level. 
 ~Treachery += 1

@@ -267,7 +267,6 @@ MonoBehaviour:
   enableMovement: 0
   stairs: {fileID: 0}
   currentLevel: END
-  loadNextLevel: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8207221545355219226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1843,7 +1842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8901721959935538316
 RectTransform:
   m_ObjectHideFlags: 0
