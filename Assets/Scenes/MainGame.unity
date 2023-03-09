@@ -266,6 +266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableMovement: 0
   stairs: {fileID: 0}
+  currentLevel: END
+  loadNextLevel: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +820,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917f8b8f358a9d048970d36cec5abdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 
   nextLevel: LUST
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  nextColor: {r: 0, g: 0, b: 0, a: 0}
   level: {fileID: 2090608379}
   image: {fileID: 1533596656}
   fading: 0
@@ -957,7 +962,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 633a8b01dff444ac18db7c11bc7b1334, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5016b9e5b0ef84480aa5df9d94f83a05, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
