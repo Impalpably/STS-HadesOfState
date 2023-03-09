@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SoundMainMenu : MonoBehaviour
 {
-    public AudioSource myAudio;
+    public AudioSource audio;
     // Start is called before the first frame update
    public void playButton()
     {
-        myAudio.Play();
+        audio.Play();
     }
 }
