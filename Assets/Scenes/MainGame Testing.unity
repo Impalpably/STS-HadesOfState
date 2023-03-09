@@ -284,7 +284,7 @@ MonoBehaviour:
   InkStoryLevel: {fileID: 8901721959924238261}
   NPCImage: {fileID: 8901721959780640061}
   UIPanel: {fileID: 8901721960336160775}
-  stories:
+  storyUI:
   - {fileID: 8901721959924238261}
   - {fileID: 8901721961665928552}
   - {fileID: 8901721960216094013}
@@ -293,8 +293,17 @@ MonoBehaviour:
   - {fileID: 8901721959924238261}
   - {fileID: 8901721961592143595}
   - {fileID: 8901721961198550354}
-  - {fileID: 8901721961198550354}
   - {fileID: 8901721959924238261}
+  storyScripts:
+  - {fileID: 8207221545472001722}
+  - {fileID: 8207221545355219220}
+  - {fileID: 8207221547228167043}
+  - {fileID: 8207221546433787518}
+  - {fileID: 8207221547067504039}
+  - {fileID: 8207221547112928144}
+  - {fileID: 8207221546606031995}
+  - {fileID: 8207221546001844834}
+  - {fileID: 8207221547019918091}
   firstStoryTime: 1
 --- !u!1 &180802871
 GameObject:
@@ -1172,7 +1181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8207221545355219226
 MonoBehaviour:
   m_ObjectHideFlags: 0
