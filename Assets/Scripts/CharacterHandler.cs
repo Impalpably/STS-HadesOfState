@@ -128,6 +128,8 @@ public class CharacterHandler : MonoBehaviour
                     break;
             }
 
+            fadeToBlack.level.color = fadeToBlack.currentColor;
+
             currentLevel = fadeToBlack.currentLevel;
         }
     }
