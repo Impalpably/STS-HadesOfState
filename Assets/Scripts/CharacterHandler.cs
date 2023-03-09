@@ -11,7 +11,7 @@ public class CharacterHandler : MonoBehaviour
 
     public static int levelIndex = 0;
     public string currentLevel = "END";
-    public bool loadNextLevel;
+    //public bool loadNextLevel;
 
     private Color limboColor = Color.gray;
     private Color lustColor = new Color(0f, 0.275f, 0.8f, 1f);
@@ -23,12 +23,6 @@ public class CharacterHandler : MonoBehaviour
     private Color fraudColor = new Color(0f, 0.22f, 0f, 1f);
     private Color treacheryColor = new Color(0.588f, 0f, 0.518f, 1f);
     private Color endingColor = Color.white;
-
-    public void UpdateLevelIndex()
-    {
-        levelIndex++;
-        return;
-    }
 
     private void Awake()
     {
@@ -126,12 +120,19 @@ public class CharacterHandler : MonoBehaviour
         }
     }
 
-    void Update()
+    public void LoadNextLevel()
     {
-        if (loadNextLevel)
-        {
-            fadeToBlack.AWinnerIsYou();
-            loadNextLevel = false;
-        }
+        fadeToBlack.AWinnerIsYou();
+    }
+
+    public void UpdateLevelIndex()
+    {
+        levelIndex++;
+        return;
+    }
+
+    public void EnableMovement()
+    {
+        enableMovement = true;
     }
 }

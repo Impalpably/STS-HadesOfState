@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
 
     public bool canUseStairs = false;
 
+    public GameObject stairsPrompt;
+    public GameObject noStairsPrompt;
+
     [SerializeField]
     private float speed = 1f;
 
@@ -21,6 +24,19 @@ public class Player : MonoBehaviour
     {
         characterHandler = CharacterHandler.instance;
         myRigidbody = GetComponent<Rigidbody2D>();
+        GetStairsPrompt();
+    }
+
+    public void UseStairs()
+    {
+        stairsPrompt.SetActive(true);
+    }
+
+    IEnumerator CantUseStairs()
+    {
+        noStairsPrompt.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        noStairsPrompt.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -29,10 +45,14 @@ public class Player : MonoBehaviour
         {
             if (canUseStairs)
             {
+                characterHandler.enableMovement = false;
+                myRigidbody.velocity = new Vector2(0, 0);
+                UseStairs();
                 Debug.Log("Use stairs?");
             }
             else
             {
+                StartCoroutine(CantUseStairs());
                 Debug.Log("You can't use the stairs yet! You need to unlock them first.");
             }
         }
@@ -47,6 +67,7 @@ public class Player : MonoBehaviour
             myRigidbody.velocity = new Vector2(0, 0);
             other.rigidbody.velocity = new Vector2(0, 0);
             Debug.Log("Talk to NPC");
+            canUseStairs = true;
         }
     }
 
@@ -61,9 +82,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    void GetStairsPrompt()
+    {
+        stairsPrompt = GameObject.FindWithTag("StairsPrompt");
+        noStairsPrompt = GameObject.FindWithTag("NoStairsPrompt");
+        stairsPrompt.SetActive(false);
+        noStairsPrompt.SetActive(false);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (stairsPrompt == null || noStairsPrompt == null)
+        {
+            GetStairsPrompt();
+        }
+
         if (characterHandler.enableMovement)
         { 
             myRigidbody.velocity = movementInput * speed;
