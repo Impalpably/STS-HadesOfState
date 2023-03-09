@@ -95,7 +95,7 @@ public class FadeToBlack : MonoBehaviour
         atMinAlpha = false;
         characterHandler = CharacterHandler.instance;
         level.text = currentLevel;
-        level.color = currentColor;
+        //level.color = currentColor;
     }
 
     // Update is called once per frame
