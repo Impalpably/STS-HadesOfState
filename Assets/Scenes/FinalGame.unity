@@ -1917,7 +1917,7 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
+  - {fileID: 4900000, guid: 5f3cee9fbf7db4a2c98697aa424f9aa3, type: 3}
 --- !u!4 &8207221547019918090
 Transform:
   m_ObjectHideFlags: 0
@@ -2056,7 +2056,7 @@ MonoBehaviour:
   ButtonPrefab: {fileID: 1796403110525096913, guid: 95f82c2ef8c8f4be9be65a93edab889b, type: 3}
   End: 0
   inkJSONAsset:
-  - {fileID: 4900000, guid: 8bdef0edf4e674e1181805e04c5a6b00, type: 3}
+  - {fileID: 4900000, guid: 7d42cfcd031804327829e6c4a486ed80, type: 3}
 --- !u!4 &8207221547112928151
 Transform:
   m_ObjectHideFlags: 0

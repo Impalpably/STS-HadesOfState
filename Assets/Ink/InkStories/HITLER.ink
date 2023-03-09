@@ -5,7 +5,7 @@ VAR End = false
 
 {~Others show it in this feeling may be seen on the individual whom everybody knows to violent manifestations of the whole affair. | In practice no matter how disastrous they may turn out for painting, especially in the obligations that millions of the profound discontent which exists among them.}
 
-*You are a terrible personal, please rot
+*You are a terrible person, please rot
 ~Violence += 1
 ->Hitler
 

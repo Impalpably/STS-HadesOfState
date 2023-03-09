@@ -6,6 +6,7 @@ Welcome, young lady, to the Maleboge.
 
 *Hello, old sir, and what did you do?
 ~Fraud -= 1
+->Berlusconi
 
 *Nice to meet you, you {sick|bad} man. I can't imagine what you are doing here.
 ~ Fraud += 1
