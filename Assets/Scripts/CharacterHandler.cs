@@ -12,7 +12,7 @@ public class CharacterHandler : MonoBehaviour
     public GameObject stairs;
     private FadeToBlack fadeToBlack;
 
-    public static int levelIndex = 5;
+    public static int levelIndex = 0;
     public string currentLevel = "END";
     //public bool loadNextLevel;
 
