@@ -10,6 +10,8 @@ public class NPCInkDialogue : MonoBehaviour
     public GameObject NPCImage;
     public GameObject UIPanel;
 
+    public GameObject[] stories;
+
     public bool firstStoryTime = true;
 
     private void Awake()
@@ -20,6 +22,12 @@ public class NPCInkDialogue : MonoBehaviour
             return;
         }
         instance = this;
+    }
+
+    public void GetStory(int levelIndex)
+    {
+        InkStoryLevel = stories[levelIndex];
+        NPCImage = InkStoryLevel.transform.Find("Image").gameObject;
     }
 
     public void TellStory()
