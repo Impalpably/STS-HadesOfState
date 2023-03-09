@@ -2,7 +2,7 @@ INCLUDE Globals.ink
 
 VAR End = false
 
-Welcome to the first level of hell Limbo. 
+Welcome to the first level of hell Limbo. I am Marcus Aurelius and I am your very insightful guide. 
 
 *So what are your insights?
 ->Aurelius
@@ -35,7 +35,9 @@ Welcome to the first level of hell Limbo.
 
 == Finish == 
 
-You may make an excellent use of life.
+I should tell you. Every conversation you have, every choice you make and every reply will cost you your place in hell, or if you're very good hell. So be careful what you say.
+
+And my final parting wisdome. You may make an excellent use of life.
 
 ~ End = true
 
