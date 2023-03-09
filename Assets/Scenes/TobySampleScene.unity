@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e8fca90f13a7e46ab009e215e3233d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterHandler: {fileID: 0}
   player: {fileID: 460511233352602461, guid: 921785f3ca46f4648bfbd1da568975d7, type: 3}
   stairs: {fileID: 460511233352602461, guid: e4bf4edceeab1e5438146b2358ea7ffa, type: 3}
   mainCamera: {fileID: 519420028}
@@ -264,6 +265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableMovement: 0
+  stairs: {fileID: 0}
+  loadNextLevel: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 917f8b8f358a9d048970d36cec5abdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: LIMBO
   nextLevel: LUST
   level: {fileID: 2090608379}
   image: {fileID: 1533596656}
@@ -686,7 +690,7 @@ MonoBehaviour:
   minAlpha: 0
   atMaxAlpha: 0
   atMinAlpha: 0
-  duration: 0.5
+  duration: 1
   lerp: 0
   characterHandler: {fileID: 0}
 --- !u!114 &1533596656
@@ -816,7 +820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LIMBO
+  m_text: '[DERP]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
