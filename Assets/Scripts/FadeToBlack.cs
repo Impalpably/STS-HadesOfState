@@ -44,12 +44,11 @@ public class FadeToBlack : MonoBehaviour
 
     IEnumerator LoadNextLevel()
     {
-        yield return new WaitForSeconds(duration);
-
         AsyncOperation async;
 
         if ((nextLevel == "END") || nextLevel == "")
-        { 
+        {
+            yield return new WaitForSeconds(duration);
             async = SceneManager.LoadSceneAsync("MainMenu");
 
             while (!async.isDone)
@@ -58,7 +57,8 @@ public class FadeToBlack : MonoBehaviour
             }
         }
         else
-        { 
+        {
+            yield return new WaitForSeconds(duration * 2);
             async = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
             while (!async.isDone)

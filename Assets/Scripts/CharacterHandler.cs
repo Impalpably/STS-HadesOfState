@@ -10,7 +10,7 @@ public class CharacterHandler : MonoBehaviour
     private FadeToBlack fadeToBlack;
 
     public static int levelIndex = 0;
-
+    public string currentLevel = "END";
     public bool loadNextLevel;
 
     private Color limboColor = Color.gray;
@@ -122,6 +122,7 @@ public class CharacterHandler : MonoBehaviour
                     break;
             }
 
+            currentLevel = fadeToBlack.currentLevel;
         }
     }
 
