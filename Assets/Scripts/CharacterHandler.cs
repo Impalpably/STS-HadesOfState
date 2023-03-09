@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterHandler : MonoBehaviour
 {
     public NPCInkDialogue story;
+    public AudioSource BGM;
+    public AudioClip[] backgroundMusic;
     public static CharacterHandler instance;
     public bool enableMovement;
     public GameObject stairs;
@@ -53,6 +55,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = limboColor;
                     fadeToBlack.nextColor = lustColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[0];
                     break;
 
                 case 1:
@@ -61,6 +64,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = lustColor;
                     fadeToBlack.nextColor = gluttonyColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[0];
                     break;
 
                 case 2:
@@ -69,6 +73,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = gluttonyColor;
                     fadeToBlack.nextColor = greedColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[0];
                     break;
 
                 case 3:
@@ -77,6 +82,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = greedColor;
                     fadeToBlack.nextColor = wrathColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[0];
                     break;
 
                 case 4:
@@ -85,6 +91,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = wrathColor;
                     fadeToBlack.nextColor = heresyColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[0];
                     break;
 
                 case 5:
@@ -93,6 +100,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = heresyColor;
                     fadeToBlack.nextColor = violenceColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[0];
                     break;
 
                 case 6:
@@ -101,6 +109,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = violenceColor;
                     fadeToBlack.nextColor = fraudColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[0];
                     break;
 
                 case 7:
@@ -109,6 +118,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = fraudColor;
                     fadeToBlack.nextColor = treacheryColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[0];
                     break;
 
                 case 8:
@@ -117,6 +127,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = treacheryColor;
                     fadeToBlack.nextColor = endingColor;
                     story.GetStory(levelIndex);
+                    BGM.clip = backgroundMusic[1];
                     break;
 
                 default:
@@ -125,6 +136,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.currentColor = endingColor;
                     fadeToBlack.nextColor = endingColor;
                     story.GetStory(0);
+                    BGM.clip = backgroundMusic[0];
                     break;
             }
 
@@ -143,6 +155,11 @@ public class CharacterHandler : MonoBehaviour
     {
         levelIndex++;
         return;
+    }
+
+    public int GetLevelIndex()
+    {
+        return levelIndex;
     }
 
     public void EnableMovement()

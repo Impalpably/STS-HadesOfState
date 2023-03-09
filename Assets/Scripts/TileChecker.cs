@@ -9,7 +9,7 @@ public class TileChecker : MonoBehaviour
     public Sprite[] floorTwoSides;
     public Sprite[] floorTwoSidesCorner;
     public Sprite[] floorOneSide;
-    public Sprite floorAllSides;
+    public Sprite[] floorAllSides;
 
     public SpriteRenderer floor;
     public LayerMask checkLayers;
@@ -19,15 +19,19 @@ public class TileChecker : MonoBehaviour
     public bool isUp;
     public bool isDown;
 
+    private int index;
+
     // Start is called before the first frame update
     void Start()
     {
         floor = GetComponent<SpriteRenderer>();
         Invoke("CheckTile", 1f);
+        index = CharacterHandler.instance.GetLevelIndex();
     }
 
     void CheckTile()
     {
+
         // Checks in each direction if there is a tile adjacent to it
         isUp = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(0, 1), 0.1f, checkLayers);
         isDown = Physics2D.OverlapCircle((Vector2)transform.position + new Vector2(0, -1), 0.1f, checkLayers);
@@ -51,21 +55,24 @@ public class TileChecker : MonoBehaviour
     }
 
     void UpdateFloorTiles()
-    { 
+    {
         // By default, grabs a standard tile
-        floor.sprite = floorTiles[Random.Range(0, floorTiles.Length)];
+        floor.sprite = floorTiles[index];
+        //floor.sprite = floorTiles[Random.Range(0, floorTiles.Length)];
 
         // Checks which tiles are adjacent and adjusts the tile's orientation in accordance
         //
         // Up & Down Straight
         if (isUp && isDown && !isLeft && !isRight)
         {
-            floor.sprite = floorTwoSides[Random.Range(0, floorTwoSides.Length)];
+            floor.sprite = floorTwoSides[index];
+            //floor.sprite = floorTwoSides[Random.Range(0, floorTwoSides.Length)];
         }
         // Left & Right Straight
         else if (!isUp && !isDown && isLeft && isRight)
         {
-            floor.sprite = floorTwoSides[Random.Range(0, floorTwoSides.Length)];
+            floor.sprite = floorTwoSides[index];
+            //floor.sprite = floorTwoSides[Random.Range(0, floorTwoSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
 
@@ -73,24 +80,28 @@ public class TileChecker : MonoBehaviour
         // Left & Down Corner
         else if (!isUp && isDown && isLeft && !isRight)
         {
-            floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
+            floor.sprite = floorTwoSidesCorner[index];
+            //floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, -90);
         }
         // Left & Up Corner
         else if (isUp && !isDown && isLeft && !isRight)
         {
-            floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
+            floor.sprite = floorTwoSidesCorner[index]; 
+            //floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 180);
         }
         // Right & Down Corner
         else if (!isUp && isDown && !isLeft && isRight)
         {
-            floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
+            floor.sprite = floorTwoSidesCorner[index]; 
+            //floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
         }
         // Right & Up Corner
         else if (isUp && !isDown && !isLeft && isRight)
         {
-            floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
+            floor.sprite = floorTwoSidesCorner[index]; 
+            //floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
 
@@ -98,44 +109,52 @@ public class TileChecker : MonoBehaviour
         // Up Deadend
         else if (isUp && !isDown && !isLeft && !isRight)
         {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+
+            floor.sprite = floorThreeSides[index]; 
+            //floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
         // Down Deadend
         else if (!isUp && isDown && !isLeft && !isRight)
         {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+            floor.sprite = floorThreeSides[index]; 
+            //floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, -90);
         }
         // Left Deadend
         else if (!isUp && !isDown && isLeft && !isRight)
         {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+            floor.sprite = floorThreeSides[index]; 
+            //floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 180);
         }
         // Right Deadend
         else if (!isUp && !isDown && !isLeft && isRight)
         {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+            floor.sprite = floorThreeSides[index]; 
+            //floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
         }
     }
 
     void UpdateWallTiles()
     {
         // By default, grabs a standard tile
-        floor.sprite = floorTiles[Random.Range(0, floorTiles.Length)];
+        floor.sprite = floorTiles[index];
+        //floor.sprite = floorTiles[Random.Range(0, floorTiles.Length)];
 
         // Checks which tiles are adjacent and adjusts the tile's orientation in accordance
         //
         // Up & Down Straight
         if (isUp && isDown && !isLeft && !isRight)
         {
-            floor.sprite = floorTwoSides[Random.Range(0, floorTwoSides.Length)];
+            floor.sprite = floorTwoSides[index]; 
+            //floor.sprite = floorTwoSides[Random.Range(0, floorTwoSides.Length)];
         }
         // Left & Right Straight
         else if (!isUp && !isDown && isLeft && isRight)
         {
-            floor.sprite = floorTwoSides[Random.Range(0, floorTwoSides.Length)];
+            floor.sprite = floorTwoSides[index];
+            //floor.sprite = floorTwoSides[Random.Range(0, floorTwoSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
 
@@ -143,25 +162,29 @@ public class TileChecker : MonoBehaviour
         // Left & Down Corner
         else if (!isUp && isDown && isLeft && !isRight)
         {
-            floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
+            floor.sprite = floorTwoSidesCorner[index];
+            //floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
             floor.flipX = true;
         }
         // Left & Up Corner
         else if (isUp && !isDown && isLeft && !isRight)
         {
-            floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
+            floor.sprite = floorTwoSidesCorner[index]; 
+            //floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
             floor.flipX = true;
             floor.flipY = true;
         }
         // Right & Down Corner
         else if (!isUp && isDown && !isLeft && isRight)
         {
-            floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
+            floor.sprite = floorTwoSidesCorner[index]; 
+            //floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
         }
         // Right & Up Corner
         else if (isUp && !isDown && !isLeft && isRight)
         {
-            floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
+            floor.sprite = floorTwoSidesCorner[index]; 
+            //floor.sprite = floorTwoSidesCorner[Random.Range(0, floorTwoSidesCorner.Length)];
             floor.flipY = true;
         }
 
@@ -169,57 +192,66 @@ public class TileChecker : MonoBehaviour
         // Up Wall
         else if (!isUp && isDown && isLeft && isRight)
         {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+            floor.sprite = floorThreeSides[index]; 
+            //floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
         // Down Wall
         else if (isUp && !isDown && isLeft && isRight)
         {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+            floor.sprite = floorThreeSides[index]; 
+            //floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, -90);
         }
         // Left Wall
         else if (isUp && isDown && !isLeft && isRight)
         {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+            floor.sprite = floorThreeSides[index];
+            //floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
             floor.flipX = true;
         }
         // Right Wall
         else if (isUp && isDown && isLeft && !isRight)
         {
-            floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
+            floor.sprite = floorThreeSides[index]; 
+            //floor.sprite = floorThreeSides[Random.Range(0, floorThreeSides.Length)];
         }
 
         //
         // Up Deadend
         else if (isUp && !isDown && !isLeft && !isRight)
         {
-            floor.sprite = floorOneSide[Random.Range(0, floorOneSide.Length)];
+            floor.sprite = floorOneSide[index];
+            //floor.sprite = floorOneSide[Random.Range(0, floorOneSide.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 90);
         }
         // Down Deadend
         else if (!isUp && isDown && !isLeft && !isRight)
         {
-            floor.sprite = floorOneSide[Random.Range(0, floorOneSide.Length)];
+            floor.sprite = floorOneSide[index]; 
+            //floor.sprite = floorOneSide[Random.Range(0, floorOneSide.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, -90);
         }
         
         // Left Deadend
         else if (!isUp && !isDown && isLeft && !isRight)
         {
-            floor.sprite = floorOneSide[Random.Range(0, floorOneSide.Length)];
+            floor.sprite = floorOneSide[index]; 
+            //floor.sprite = floorOneSide[Random.Range(0, floorOneSide.Length)];
             floor.transform.localRotation = Quaternion.Euler(0, 0, 180);
         }
         // Right Deadend
         else if (!isUp && !isDown && !isLeft && isRight)
         {
-            floor.sprite = floorOneSide[Random.Range(0, floorOneSide.Length)];
+            floor.sprite = floorOneSide[index]; 
+            //floor.sprite = floorOneSide[Random.Range(0, floorOneSide.Length)];
         }
 
         // Fully Surrounded By Floor - Walls Only
         else if (!isUp && !isDown && !isLeft && !isRight)
         {
-            floor.sprite = floorAllSides;
+            floor.sprite = floorAllSides[index];
+            //floor.sprite = floorAllSides[Random.Range(0, floorAllSides.Length)];
         }
     }
 }

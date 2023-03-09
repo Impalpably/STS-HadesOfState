@@ -283,9 +283,9 @@ public class AllBlocksHandler : MonoBehaviour
         int wallGeneratorLength = 15;
 
         // How manay Wall Generators we want to spawn in each direction
-        // Must be odd
-        int wallGeneratorCount = 7;
-        int halfCount = Mathf.FloorToInt(wallGeneratorCount / 2);
+        // Always odd
+        int halfCount = 3;
+        int wallGeneratorCount = (halfCount * 2) + 1;
 
         for (int i = 0; i < wallGeneratorCount; i++)
         {

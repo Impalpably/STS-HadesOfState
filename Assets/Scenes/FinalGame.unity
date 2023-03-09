@@ -266,6 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   story: {fileID: 0}
+  BGM: {fileID: 258257016}
+  backgroundMusic:
+  - {fileID: 8300000, guid: 9ed710faa41f24cbe87c6ead312a5123, type: 3}
+  - {fileID: 8300000, guid: 54bdb53d3ec9c4fb8b5e34d38f954c4c, type: 3}
   enableMovement: 0
   stairs: {fileID: 0}
   currentLevel: END
