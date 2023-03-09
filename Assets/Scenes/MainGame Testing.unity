@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40efbd7f24c96764cabbbe47751cbd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  story: {fileID: 0}
   enableMovement: 0
   stairs: {fileID: 0}
   currentLevel: END
@@ -283,6 +284,17 @@ MonoBehaviour:
   InkStoryLevel: {fileID: 8901721959924238261}
   NPCImage: {fileID: 8901721959780640061}
   UIPanel: {fileID: 8901721960336160775}
+  stories:
+  - {fileID: 8901721959924238261}
+  - {fileID: 8901721961665928552}
+  - {fileID: 8901721960216094013}
+  - {fileID: 8901721959898681377}
+  - {fileID: 8901721961132214530}
+  - {fileID: 8901721959924238261}
+  - {fileID: 8901721961592143595}
+  - {fileID: 8901721961198550354}
+  - {fileID: 8901721961198550354}
+  - {fileID: 8901721959924238261}
   firstStoryTime: 1
 --- !u!1 &180802871
 GameObject:
@@ -442,7 +454,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

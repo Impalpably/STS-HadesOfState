@@ -224,6 +224,7 @@ public class AllBlocksHandler : MonoBehaviour
 
                             GameObject myEnemy = Instantiate(enemies[randomEnemy], new Vector3(myTile.transform.position.x, myTile.transform.position.y, -0.009f), Quaternion.identity);
                             //Debug.Log("Placed enemy.");
+                            myEnemy.GetComponent<NPCMovement>().UpdateSprite();
                             break;
                         }
                     }

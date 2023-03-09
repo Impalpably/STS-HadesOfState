@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterHandler : MonoBehaviour
 {
+    public NPCInkDialogue story;
     public static CharacterHandler instance;
     public bool enableMovement;
     public GameObject stairs;
@@ -39,6 +40,7 @@ public class CharacterHandler : MonoBehaviour
     {
         enableMovement = false;
         fadeToBlack = FadeToBlack.instance;
+        story = NPCInkDialogue.instance;
         
         // Only execute if the Black Screen exists
         if (fadeToBlack != null)
@@ -50,6 +52,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "LUST";
                     fadeToBlack.currentColor = limboColor;
                     fadeToBlack.nextColor = lustColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 case 1:
@@ -57,6 +60,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "GLUTTONY";
                     fadeToBlack.currentColor = lustColor;
                     fadeToBlack.nextColor = gluttonyColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 case 2:
@@ -64,6 +68,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "GREED";
                     fadeToBlack.currentColor = gluttonyColor;
                     fadeToBlack.nextColor = greedColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 case 3:
@@ -71,6 +76,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "WRATH";
                     fadeToBlack.currentColor = greedColor;
                     fadeToBlack.nextColor = wrathColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 case 4:
@@ -78,6 +84,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "HERESY";
                     fadeToBlack.currentColor = wrathColor;
                     fadeToBlack.nextColor = heresyColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 case 5:
@@ -85,6 +92,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "VIOLENCE";
                     fadeToBlack.currentColor = heresyColor;
                     fadeToBlack.nextColor = violenceColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 case 6:
@@ -92,6 +100,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "FRAUD";
                     fadeToBlack.currentColor = violenceColor;
                     fadeToBlack.nextColor = fraudColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 case 7:
@@ -99,6 +108,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "TREACHERY";
                     fadeToBlack.currentColor = fraudColor;
                     fadeToBlack.nextColor = treacheryColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 case 8:
@@ -106,6 +116,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "END";
                     fadeToBlack.currentColor = treacheryColor;
                     fadeToBlack.nextColor = endingColor;
+                    story.GetStory(levelIndex);
                     break;
 
                 default:
@@ -113,6 +124,7 @@ public class CharacterHandler : MonoBehaviour
                     fadeToBlack.nextLevel = "";
                     fadeToBlack.currentColor = endingColor;
                     fadeToBlack.nextColor = endingColor;
+                    story.GetStory(0);
                     break;
             }
 

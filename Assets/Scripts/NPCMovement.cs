@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCMovement : MonoBehaviour
 {
@@ -134,5 +135,11 @@ public class NPCMovement : MonoBehaviour
             isMoving = true;
             Invoke("StopMovement", duration);
         }
+    }
+
+    public void UpdateSprite()
+    {
+        SpriteRenderer mySprite = GetComponent<SpriteRenderer>();
+        mySprite.sprite = NPCInkDialogue.instance.NPCImage.GetComponent<Image>().sprite;
     }
 }
