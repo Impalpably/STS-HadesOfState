@@ -42,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Weather
+    uniqueID: 1669593263
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
